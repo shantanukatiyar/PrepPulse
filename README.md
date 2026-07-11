@@ -42,7 +42,6 @@ PrepPulse is a frontend web application that helps students evaluate their curre
 ```
 PrepPulse
 │
-├── assets/
 ├── css/
 │   ├── style.css
 │   ├── profile.css
