@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrepPulse | Placement Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="bg-circle one"></div>
+    <div class="bg-circle two"></div>
+
+    <main class="container">
+
+        <header class="dashboard-header">
+            <a href="index.html" class="brand">
+                <i class="fa-solid fa-brain"></i>
+                <span>PrepPulse</span>
+            </a>
+
+            <a href="profile.html" class="retake-btn">
+                <i class="fa-solid fa-rotate-right"></i>
+                Retake Assessment
+            </a>
+        </header>
+
+        <section class="welcome-section">
+            <span class="page-badge">
+                <i class="fa-solid fa-sparkles"></i>
+                Placement Readiness Report
+            </span>
+
+            <h1 id="welcomeTitle">Your Preparation Snapshot</h1>
+
+            <p id="welcomeText">
+                Review your current readiness, identify strong areas,
+                and focus on the skills that need more attention.
+            </p>
+
+            <div id="profileDetails" class="profile-details"></div>
+        </section>
+
+        <section class="overall-card">
+
+            <div class="overall-content">
+                <div>
+                    <p class="card-label">Overall Placement Score</p>
+
+                    <h2 id="readinessTitle">Calculating your readiness...</h2>
+
+                    <p id="overallMessage" class="overall-message">
+                        Your assessment results are being analyzed.
+                    </p>
+
+                    <div class="score-details">
+                        <div>
+                            <span id="totalMarks">0</span>
+                            <small>Marks out of 80</small>
+                        </div>
+
+                        <div>
+                            <span>20</span>
+                            <small>Questions completed</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="score-ring">
+                    <div class="score-ring-inner">
+                        <strong id="overallScore">0%</strong>
+                        <span>Readiness</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-heading">
+            <div>
+                <p>SKILL BREAKDOWN</p>
+                <h2>Category-wise Performance</h2>
+            </div>
+
+            <span>Higher score means stronger readiness</span>
+        </section>
+
+        <section class="cards">
+
+            <article class="card">
+                <div class="card-top">
+                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                    <span id="dsaStatus" class="status">Loading</span>
+                </div>
+
+                <h3>DSA</h3>
+                <p>Problem solving and coding fundamentals</p>
+
+                <div class="score-row">
+                    <strong id="dsaScore">0%</strong>
+                    <span id="dsaMarks">0 / 20</span>
+                </div>
+
+                <div class="mini-progress">
+                    <div id="dsaBar"></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <span id="coreStatus" class="status">Loading</span>
+                </div>
+
+                <h3>Core CS</h3>
+                <p>OOP, DBMS, OS, CN and SQL basics</p>
+
+                <div class="score-row">
+                    <strong id="coreScore">0%</strong>
+                    <span id="coreMarks">0 / 20</span>
+                </div>
+
+                <div class="mini-progress">
+                    <div id="coreBar"></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <div class="skill-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <span id="aptitudeStatus" class="status">Loading</span>
+                </div>
+
+                <h3>Aptitude</h3>
+                <p>Logical thinking and quantitative ability</p>
+
+                <div class="score-row">
+                    <strong id="aptitudeScore">0%</strong>
+                    <span id="aptitudeMarks">0 / 12</span>
+                </div>
+
+                <div class="mini-progress">
+                    <div id="aptitudeBar"></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <div class="skill-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <span id="projectStatus" class="status">Loading</span>
+                </div>
+
+                <h3>Projects</h3>
+                <p>Project quality and explanation confidence</p>
+
+                <div class="score-row">
+                    <strong id="projectScore">0%</strong>
+                    <span id="projectMarks">0 / 16</span>
+                </div>
+
+                <div class="mini-progress">
+                    <div id="projectBar"></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-top">
+                    <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+                    <span id="communicationStatus" class="status">Loading</span>
+                </div>
+
+                <h3>Communication</h3>
+                <p>Interview clarity and confidence</p>
+
+                <div class="score-row">
+                    <strong id="communicationScore">0%</strong>
+                    <span id="communicationMarks">0 / 12</span>
+                </div>
+
+                <div class="mini-progress">
+                    <div id="communicationBar"></div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="insights-card">
+
+            <div class="insight-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <div>
+                <p class="card-label">SMART PERSONALIZED INSIGHTS</p>
+                <h2>Your next best step</h2>
+                <p id="aiMessage">
+                    Preparing personalized suggestions based on your assessment.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="action-section">
+
+            <div>
+                <p class="card-label">KEEP TRACK OF YOUR PROGRESS</p>
+                <h2>Save your placement readiness report</h2>
+                <p>Your report includes your profile, overall score, skill breakdown, and personalized next step.</p>
+            </div>
+
+            <div class="buttons">
+                <button id="downloadReport" type="button">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Download Report
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/pdf.js"></script>
+
+</body>
+
+</html>
